@@ -1,0 +1,87 @@
+.accordeon {
+  width: 750px;
+  position: relative;
+  overflow: hidden;
+
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p::after {
+    width: 20%;
+    background: #4ac0b0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+    content: "";
+  }
+
+  .accordeonItem {
+    margin-bottom: 2px;
+  }
+
+  .accordeonHeader {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+    background: #f5f5f5;
+
+    &:hover {
+      cursor: pointer;
+      background: #eceaea;
+    }
+
+    &:hover .iconSVG {
+      color: #4ac0b0;
+    }
+  }
+
+  .body {
+    height: 0;
+    background: white;
+    z-index: 1;
+    position: relative;
+    visibility: hidden;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+  }
+
+  .bodyConent {
+    padding: 15px;
+  }
+
+  .accordeonHeader,
+  .headerIcon,
+  .iconSVG,
+  .body {
+    transition: 0.2s;
+  }
+
+  .accordeonIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .iconSVG {
+      font-size: 21px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .accordeon {
+    width: 100%;
+  }
+}
