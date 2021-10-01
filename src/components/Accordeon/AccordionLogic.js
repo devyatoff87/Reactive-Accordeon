@@ -9,8 +9,9 @@ const AccordionLogic = () => {
     let fstEl = document.querySelector(".accordeon_").children[0].children[0];
     curr.current = fstEl;
     let body = fstEl.nextElementSibling;
+    console.log(body.children[0].clientHeight);
     let icon = fstEl.children[1];
-    open(body, icon);
+    setTimeout(() => open(body, icon), 10);
   }, []);
 
   function toggle(body, icon) {

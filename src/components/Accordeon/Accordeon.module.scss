@@ -60,6 +60,16 @@
 
   .bodyConent {
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .bodyContentRight,
+  .bodyContentLeft {
+    width: 49%;
+    display: block;
+    height: 100%;
   }
 
   .accordeonHeader,

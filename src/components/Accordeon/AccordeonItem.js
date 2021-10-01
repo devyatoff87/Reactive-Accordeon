@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Accordeon.module.scss";
 import { FiChevronDown } from "react-icons/fi";
+
 const AccordeonItem = ({ item, callbackClick }) => {
   return (
     <>
@@ -17,7 +18,13 @@ const AccordeonItem = ({ item, callbackClick }) => {
         </div>
         <div className={styles.body}>
           <div className={styles.bodyConent}>
-            <p>{item.body}</p>
+            <p className={styles.bodyContentLeft}>{item.body}</p>
+            <div className={styles.bodyContentRight}>
+              <img
+                src={require("../../assets/img/" + item.img).default}
+                alt="lol"
+              />
+            </div>
           </div>
         </div>
       </div>
